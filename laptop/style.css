@@ -1,0 +1,67 @@
+body{
+    background: #6acccf;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    --device-dark: #3d444c;
+    --screen: #f9f8f6;
+}
+
+/*FONTS*/
+.device p{
+    font-size: 2vw;
+}
+/* // END FONTS*/
+
+.device__display{
+    margin: 2rem auto 0;
+    width: 65vw;
+    border: 1.5rem solid var(--device-dark);
+    border-radius: 1rem;
+    background: var(--device-dark);
+    position: relative;
+}
+.device__display:before{
+
+}
+.device__screen{
+    background: var(--screen);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    height: 36vw;
+    max-height: 36vw;
+    overflow: scroll;
+    font-family: monospace;
+    /*min-height: 70vh;*/
+}
+
+.device__keyboard{
+    margin: 0 auto;
+    max-width: 75vw;
+    background: var(--device-dark);
+    padding: 1rem;
+    border-top: 0.3rem solid var(--screen);
+    border-radius: 0 0 2rem 2rem;
+    position: relative;
+}
+.device__keyboard:after,.device__display:before{
+    content: ' ';
+    position: absolute;
+    width: 100px;
+    background: var(--screen);
+    height: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.device__display:before{
+    top: -0.8rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0.8;
+}

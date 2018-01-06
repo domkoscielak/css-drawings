@@ -1,0 +1,69 @@
+body{
+    background: #6acccf;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    --device-dark: #3d444c;
+    --screen: #f9f8f6;
+}
+
+/*FONTS*/
+.device p{
+    font-size: 1.7vw;
+}
+/* // END FONTS*/
+
+.device__display{
+    margin: 2rem auto 0;
+    width: 33vw;
+    border: 1.8rem solid var(--device-dark);
+    border-radius: 1.6rem;
+    background: var(--device-dark);
+    position: relative;
+    border-bottom: 4rem solid var(--device-dark);
+    border-top: 3rem solid var(--device-dark);
+}
+.device__display:before{
+
+}
+.device__screen{
+    background: var(--screen);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    height: 75vh;
+
+    overflow: scroll;
+    font-family: monospace;
+    /*min-height: 70vh;*/
+}
+
+.device__keyboard{
+    height: 0;
+    opacity: 0;
+}
+.device__display:before,.device__display:after{
+    /*FACE CAMERA*/
+    content: ' ';
+    position: absolute;
+    background: var(--screen);
+    top: -1.8rem;
+    left: 0;
+    right: 0; /*bottom*/
+    margin:  0 auto;
+    
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.device__display:after{
+    /*HOME BUTTON*/
+    top: auto;
+    bottom: -3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--device-dark);
+    border: 3px solid #777;
+}
